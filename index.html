@@ -16,38 +16,52 @@
       font-family: sans-serif;
     }
     body {
-      background: url(./cake-2201881_1920.jpg) center top;
-      background-size: cover;
-    }
-/*    header {
-      position: absolute;
-      top: 40%;
-      left: 52%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-family: 'Indie Flower', cursive;
-      font-size: 4rem;
 
     }
-    span {
-      font-size: 11rem;
-
-    }*/
+    ul#tabSelect {
+      font-size: 3rem;
+    }
+    ul#tabSelect li {
+      display: inline;
+    }
+    ul#tabSelect {
+      list-style-type: none;
+      margin: 15px 0 0 0;
+      padding: 0 0 0.3em 0;
+    }
+    ul#tabSelect li a {
+      color: black;
+      border: 1px solid black;
+      border-bottom: none; 
+      text-decoration: none;
+      border-top-left-radius: .5em;
+      border-top-right-radius: .5em;
+    }
+    ul#tabSelect li a:hover {
+      background-color: pink !important;
+    }
+    div.tabs {
+      border: 1px solid black;
+      padding: 5px;
+      overflow: auto;
+    }
   </style>
 
   <script>
   function writeHTMLasJS(){
-    const bodyElem = document.querySelector('#content');
+    const bodyElem = document.querySelector('#tab0Content');
+    // var imgElem = document.createElement("img");
+    // imgElem.src = './cake-2201881_1920.jpg';
+    bodyElem.style.backgroundImage = " url('./cake-2201881_1920.jpg')";
+    bodyElem.style.backgroundSize = "cover";
+    bodyElem.style.backgroundPosition = "center top";
+    // bodyElem.appendChild(imgElem);
     bodyElem.innerHTML += '<header><h1> When you REALLY need some donuts but a simple store won\'t do.  Come to . . . <br><span> Donut Town <\/span> <\/h1></header>';
     var header = document.querySelector('header');
     var h1Element = document.querySelector('h1');
     var spanElement = document.querySelector('span');
     header.style.position = "absolute";
-    header.style.top = "40%";
+    header.style.top = "52%";
     header.style.left = "52%";
     header.style.color = "white";
     header.style.textAlign = "center";
@@ -56,15 +70,79 @@
     h1Element.style.fontFamily = "'Indie Flower', cursive";
     h1Element.style.fontSize = "4rem";
     spanElement.style.fontSize = "11rem";
-
-
   }
+    var links = new Array();
+      var divs = new Array();
+      var tabCount;
+      var lastTabSelected = -1;
+      var resizeFlag = true; //resize divs when true
+      function showTab(selectedTab) {
+      console.log("inside showtab");
+      if (lastTabSelected == -1) { //use -1 as init flag
+          links = document.getElementsByClassName
+          ("tablinks"); //links must have class name "tablinks"
+          divs = document.getElementsByClassName("tabs"); //divs must have class name "tabs"
+          tabCount = Math.min(links.length, divs.length); //should be equal counts
+      }
+      for (var i = 0; i < tabCount; i++) {
+          if (i == selectedTab) {
+            links[i].style.backgroundColor = "pink";
+            links[i].style.fontWeight = "bold";
+            links[i].style.padding = "0.3em 0.3em 0.41em 0.3em";
+            divs[i].style.display = "";
+          } else {
+            links[i].style.backgroundColor = "lightgray";
+            links[i].style.fontWeight = "normal";
+            links[i].style.padding = "0.3em 0.3em 0.3em 0.3em";
+            divs[i].style.display = "none";
+          }
+          if (resizeFlag) {
+            divs[i].style.height = (window.innerHeight - 60) + "px";
+            divs[i].style.width = (window.innerWidth - 30) + "px";
+          }
+      }
+      lastTabSelected = selectedTab;
+      resizeFlag = false;
+      } 
+
+      function printFormat(tabId) {
+      var htmlStr = "<!DOCTYPE html><html><body>" + 
+      tabId.innerHTML + "</body></html>";
+      document.open(); document.write(htmlStr); document.close();
+      }
   </script>
 
   <title>Restaurant</title>
   </head>
-  <body>
-    <div id="content">
+  <body onload="showTab(0);" onresize="resizeFlag=true;showTab(lastTabSelected);">
+
+      <ul id="tabSelect">
+      <li>
+        <a href="#" onclick="showTab(0);"class="tablinks">
+          Home</a>
+      </li>
+      <li>
+        <a href="#" onclick="showTab(1);"class="tablinks">
+          Menu</a>
+      </li>
+      <li>
+        <a href="#" onclick="showTab(2);"class="tablinks">
+          Contact</a>
+      </li>
+    </ul>
+    <div class="tabs" id="tab0Content">
+      <div id="tab0HTML">
+      </div>
+    </div>
+    <div class="tabs" id="tab1Content">
+      <div id="tab1HTML">
+          Tab 1 content goes here
+      </div>
+    </div>
+    <div class="tabs" id="tab2Content">
+      <div id="tab2HTML">
+          Tab 2 content goes here
+      </div>
     </div>
 
   <script type="text/javascript">

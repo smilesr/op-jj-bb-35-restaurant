@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+   <style>
+   body,html {
+      font-size: 62.5%; 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    body {
+      background: url(./cake-2201881_1920.jpg) center top;
+      background-size: cover;
+    }
+/*    header {
+      position: absolute;
+      top: 40%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-family: 'Indie Flower', cursive;
+      font-size: 4rem;
+
+    }
+    span {
+      font-size: 11rem;
+
+    }*/
+  </style>
+
+  <script>
+  function writeHTMLasJS(){
+    const bodyElem = document.querySelector('#content');
+    bodyElem.innerHTML += '<header><h1> When you REALLY need some donuts but a simple store won\'t do.  Come to . . . <br><span> Donut Town <\/span> <\/h1></header>';
+    var header = document.querySelector('header');
+    var h1Element = document.querySelector('h1');
+    var spanElement = document.querySelector('span');
+    header.style.position = "absolute";
+    header.style.top = "40%";
+    header.style.left = "52%";
+    header.style.color = "white";
+    header.style.textAlign = "center";
+    header.style.transform = "translate(-50%, -50%)";
+    h1Element.style.margin = "0";
+    h1Element.style.fontFamily = "'Indie Flower', cursive";
+    h1Element.style.fontSize = "4rem";
+    spanElement.style.fontSize = "11rem";
+
+
+  }
+  </script>
+
+  <title>Restaurant</title>
+  </head>
+  <body>
+    <div id="content">
+    </div>
+
+  <script type="text/javascript">
+      writeHTMLasJS();
+  </script>
+  </body>
+</html>

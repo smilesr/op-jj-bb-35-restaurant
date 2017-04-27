@@ -7,6 +7,7 @@
    <meta name="description" content="">
    <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
    <style>
    body,html {
       font-size: 62.5%; 
@@ -39,6 +40,40 @@
     }
     ul#tabSelect li a:hover {
       background-color: pink !important;
+    }
+    #tab1HTML {
+      border: 1px blue solid;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 95vh;
+
+    }
+    .houses {
+      min-height: 18rem;
+      max-width: 36rem;
+      /*border: 1px red solid;*/
+    }
+    .image-room{
+      float: left;
+      /*border: 1px green solid;*/
+      /*max-height: inherit;*/
+      /*height: 25rem;*/
+      /*width: 50%;*/
+    }
+    .description{
+      line-height: 2.5rem;
+      font-size: 2rem;
+      padding-top: 1rem;
+      font-family: 'Gloria Hallelujah', cursive;
+      /*border: 1px blue solid;*/
+    
+    }
+    .image-room img {
+      max-width:20rem;
+      max-height:20rem;
+      /*object-fit: contain;*/
     }
     div.tabs {
       border: 1px solid black;
@@ -115,7 +150,7 @@
   <title>Restaurant</title>
   </head>
   <body onload="showTab(0);" onresize="resizeFlag=true;showTab(lastTabSelected);">
-
+ <!-- TABS -->
       <ul id="tabSelect">
       <li>
         <a href="#" onclick="showTab(0);"class="tablinks">
@@ -130,15 +165,56 @@
           Contact</a>
       </li>
     </ul>
+<!-- PAGES -->
     <div class="tabs" id="tab0Content">
       <div id="tab0HTML">
       </div>
     </div>
+
     <div class="tabs" id="tab1Content">
       <div id="tab1HTML">
-          Tab 1 content goes here
+          <div class="houses house1">
+            <div class="image-room">
+              <img src="./donut-522444_640.jpg">
+            </div>
+            <div class="description"> Donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house2">          <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description"> Chocolate covered goodness with sprinkles.
+            </div>
+          </div>
+          <div class="houses house3">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house4">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house5">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house6">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house7">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house8">            <div class="image-room"><img src="./donut-522444_640.jpg">
+            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
+          <div class="houses house9">            <div class="image-room"><img src="./donut-522444_640.jpg">
+        </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut, donut.
+            </div>
+          </div>
       </div>
     </div>
+    
     <div class="tabs" id="tab2Content">
       <div id="tab2HTML">
           Tab 2 content goes here

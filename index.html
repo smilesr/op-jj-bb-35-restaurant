@@ -39,20 +39,79 @@
       border-top-right-radius: .5em;
     }
     ul#tabSelect li a:hover {
-      background-color: pink !important;
+      background-color: #ff6680!important;
     }
-    #tab1HTML {
-      border: 1px blue solid;
-      display: flex;
+    #tab1Content {
+      border: 5px pink solid;
+
+      
+    display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       align-items: center;
       min-height: 95vh;
 
     }
+    #tab2Content {
+     border: 5px pink solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+     /* padding-left: 25rem;*/
+      min-height: 30rem;
+    }
+    .contact {
+      font-size: 4rem;
+      margin: auto;
+      width: 100%;
+   /*   display: flex;*/
+    }
+    #address {
+      display: inline;
+    }
+
+    .contact > a, .contact > div > a {
+       text-decoration: none;
+       color: black;
+       font-size: 4rem;
+    }
+
+    .contact > a:hover, .contact > div > a:hover {
+      color: pink;
+    }
+
+    .contact > img{
+      width: 5rem;
+      height: 3rem;
+      border-radius: 2rem;
+      margin-right: 2rem;
+    }
+    .contact > span {
+      margin-top: 0;
+      display: inline-block;
+/*    .contact {
+      min-height: 5rem;
+      margin-bottom: 3rem;
+      line-height: 4rem;
+      font-size: 4rem;
+    }*/
+
+      /*background-image: url('./cake-2201881_1920.jpg');*/
+  /*    height: 100%;
+      width: 100%;
+      object-fit:contain;*/
+    }
+    .contact > div{
+      margin: 1px orange solid;
+    }
+
     .houses {
       min-height: 18rem;
       max-width: 36rem;
+        flex-basis: 33%;
       /*border: 1px red solid;*/
     }
     .image-room{
@@ -76,10 +135,57 @@
       /*object-fit: contain;*/
     }
     div.tabs {
-      border: 1px solid black;
+      border-top: 5px solid pink;
       padding: 5px;
       overflow: auto;
     }
+/*#city-state-zip{
+        display: block;
+        margin-left: 25rem;
+        }*/
+
+
+    @media screen and (max-width: 750px) and (min-width: 300px){
+  /*    #city-state-zip{
+        margin-left: 15rem;
+      }*/
+    .contact > a{
+      font-size: 3rem;
+    }
+    .contact > img{
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+      display: block;
+    }
+    .contact > div > a {
+     font-size: 3rem;
+       }
+    .contact > span {
+      font-size: 3rem;
+     }
+    }
+
+
+/*    @media screen and (max-width: 915px){
+      #city-state-zip{
+        display: block;
+        margin-left: 5rem;
+        color: red ;
+      }
+    }
+*/
+
+/*@media screen and (min-width: 480px;) {}
+
+
+@media screen and (min-width: 768px;) {}
+
+
+@media only screen and (min-width: 992px;){}
+
+
+@media screen and (min-width: 1200px;) {}*/
   </style>
 
   <script>
@@ -172,53 +278,79 @@
     </div>
 
     <div class="tabs" id="tab1Content">
-      <div id="tab1HTML">
+      <!-- <div id="tab1HTML"> -->
           <div class="houses house1">
             <div class="image-room">
-              <img src="./donut-522444_640.jpg">
+              <img src="https://www.krispykreme.com/SharedContent/User/1c/1c4f5197-be9e-4dca-88b4-ac92cac03760.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
             </div>
-            <div class="description"> Donut, donut, donut, donut, donut, donut.
+            <div class="description"> Double dark chocoloate.
             </div>
           </div>
           <div class="houses house2">          <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description"> Chocolate covered goodness with sprinkles.
+            </div>            <div class="description"> Chocolate with sprinkles.
             </div>
           </div>
-          <div class="houses house3">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house3">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/3a/3a022e60-2dc1-4eeb-a651-5fc9db2488ff.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">Cinnamon sugar.
             </div>
           </div>
-          <div class="houses house4">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house4">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/52/52f62526-1a6a-4aa7-9064-85f7c0c10251.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">Powdered cinnamon cake
             </div>
           </div>
-          <div class="houses house5">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house5">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/2a/2acab432-44a1-4a1e-8ec1-b7b3b864e7c6.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">Strawberry frosted
             </div>
           </div>
-          <div class="houses house6">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house6">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/97/972786a8-7d91-4d82-983e-6b67a4a93865.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">Glazed.
             </div>
           </div>
-          <div class="houses house7">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house7">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/69/69029bd8-d905-4bc2-bbd0-587565c637fd.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">White frosted chocolate sprinkles
             </div>
           </div>
-          <div class="houses house8">            <div class="image-room"><img src="./donut-522444_640.jpg">
-            </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house8">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/c2/c244515d-2727-4788-a6f3-5a1d893022df.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+            </div>            <div class="description">Powdered cake
             </div>
           </div>
-          <div class="houses house9">            <div class="image-room"><img src="./donut-522444_640.jpg">
-        </div>            <div class="description">Donut, donut, donut, donut, donut, donut, donut, donut.
+          <div class="houses house9">            <div class="image-room"><img src="https://www.krispykreme.com/SharedContent/User/f9/f9c17f0e-20de-48d5-ab86-36ec95ab504c.png.ashx?w=310&h=310&mode=max&quality=60&format=jpg">
+        </div>            <div class="description">Glazed cruller.
             </div>
           </div>
-      </div>
+      <!-- </div> -->
     </div>
     
     <div class="tabs" id="tab2Content">
-      <div id="tab2HTML">
-          Tab 2 content goes here
-      </div>
+     <!--  <div id="tab2HTML"> -->
+          <div class="contact phone"> 
+              <img src="./cake-2201881_1920.jpg"></img>
+              <span> Phone: </span>
+
+              <a href="tel:+1234567890">(123) 456-7890</a>
+          </div>
+
+          <div class="contact email">
+  
+              <img src="./cake-2201881_1920.jpg"></img> 
+              <span> Email: </span>
+  
+  
+              <a href="mailto:donutholes@donuttown.com">donutholes@donuttown.com</a>
+  
+          </div>
+          <div class="contact address"> 
+  
+              <img src="./cake-2201881_1920.jpg"></img>
+              <div id="address">
+              <span> Location: </span>
+  
+  
+              <a href="https://www.google.com/maps/place/200+Galleria+Pkwy+SE,+Atlanta,+GA+30339/@33.8859164,-84.4659305,17z/data=!4m13!1m7!3m6!1s0x88f51048c50a59f3:0xf07b1ef329d88227!2s200+Galleria+Pkwy+SE,+Atlanta,+GA+30339!3b1!8m2!3d33.8859164!4d-84.4637418!3m4!1s0x88f51048c50a59f3:0xf07b1ef329d88227!8m2!3d33.8859164!4d-84.4637418"><span id="street-number">200 Galleria Parkway, Atlanta, GA 30339</span></a>
+            </div>
+  
+          </div>
+   <!--    </div> -->
     </div>
 
   <script type="text/javascript">
